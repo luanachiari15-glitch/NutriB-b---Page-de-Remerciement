@@ -1,4 +1,3 @@
-
 <script type="importmap">
 {
   "imports": {
@@ -24,6 +23,7 @@
       body {
         font-family: 'Montserrat', sans-serif;
         color: #1D2B3A;
+        -webkit-font-smoothing: antialiased;
       }
       h1, h2, h3 {
         font-family: 'Playfair Display', serif;
@@ -38,6 +38,11 @@
       .bg-deep-navy { background-color: #1D2B3A; }
       .text-deep-navy { color: #1D2B3A; }
       .border-deep-navy { border-color: #1D2B3A; }
+      
+      /* Smooth transitions for links */
+      a, button {
+        transition: all 0.3s ease;
+      }
     </style>
   </head>
   <body class="bg-off-white">
