@@ -5,10 +5,11 @@ import {
   UserPlus, 
   PlayCircle, 
   MessageCircle, 
-  ChevronRight,
-  ShieldCheck,
-  Heart,
-  Info
+  ChevronRight, 
+  ShieldCheck, 
+  Heart, 
+  Info,
+  Lock
 } from 'lucide-react';
 
 // --- Composants de Support ---
@@ -51,6 +52,11 @@ const App: React.FC = () => {
         <p className="text-lg md:text-xl text-deep-navy/80 max-w-2xl mx-auto leading-relaxed mb-4">
           Félicitations ! Pour accéder à la méthode <span className="font-semibold text-deep-navy">NutriBébé</span>, vous devez maintenant créer votre compte sur notre plateforme exclusive pour les membres.
         </p>
+
+        {/* E-mail Confirmation Notice (Compliance Update) */}
+        <p className="text-sm text-deep-navy/60 max-w-xl mx-auto italic mb-6">
+          Vous recevrez également un e-mail automatique contenant les détails de votre commande ainsi que vos informations d’accès à votre espace membre. Si vous ne trouvez pas l’e-mail, veuillez vérifier votre dossier spam.
+        </p>
         
         {/* Avis de Facturation Digistore24 */}
         <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-50/50 rounded-lg text-blue-800/70 text-xs font-medium border border-blue-100">
@@ -92,18 +98,36 @@ const App: React.FC = () => {
               description="Commencez dès aujourd'hui votre voyage vers une introduction alimentaire saine et sereine."
             />
           </div>
+
+          {/* Security Guarantee Block (Compliance Update) */}
+          <div className="mt-12 p-5 rounded-2xl bg-white/60 border border-rose-dust/20 flex items-center gap-4 text-left shadow-sm">
+            <div className="bg-rose-dust/10 p-2.5 rounded-full">
+              <ShieldCheck className="w-6 h-6 text-rose-dust" />
+            </div>
+            <p className="text-sm text-deep-navy/80 font-medium leading-relaxed">
+              Votre achat est protégé par notre garantie satisfait ou remboursé de 60 jours – sans aucune question.
+            </p>
+          </div>
         </div>
       </section>
 
       {/* Appel à l'Action (CTA) */}
       <section className="px-6 py-12 text-center">
-        <a 
-          href="https://drnutribebe-members.vercel.app/" 
-          className="inline-flex items-center justify-center bg-rose-dust hover:bg-[#D88D8D] text-white font-poppins text-lg px-10 py-5 rounded-full transition-all duration-300 transform hover:scale-[1.02] shadow-lg shadow-rose-dust/25 group"
-        >
-          Créer mon Compte et Accéder au Produit
-          <ChevronRight className="ml-2 w-5 h-5 transition-transform group-hover:translate-x-1" />
-        </a>
+        <div className="flex flex-col items-center">
+          <a 
+            href="https://drnutribebe-members.vercel.app/" 
+            className="inline-flex items-center justify-center bg-rose-dust hover:bg-[#D88D8D] text-white font-poppins text-lg px-10 py-5 rounded-full transition-all duration-300 transform hover:scale-[1.02] shadow-lg shadow-rose-dust/25 group"
+          >
+            Créer mon Compte et Accéder au Produit
+            <ChevronRight className="ml-2 w-5 h-5 transition-transform group-hover:translate-x-1" />
+          </a>
+          
+          {/* Secured Payment Info (Compliance Update) */}
+          <p className="mt-4 text-[10px] text-deep-navy/40 uppercase tracking-[0.2em] font-bold flex items-center gap-1.5">
+            <Lock className="w-3 h-3" />
+            Paiement sécurisé traité par Digistore24.
+          </p>
+        </div>
       </section>
 
       {/* Témoignage / Message Émotionnel */}
